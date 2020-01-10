@@ -8,19 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		30E3FE9323C8BEF10003AABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3FE9223C8BEF10003AABA /* AppDelegate.swift */; };
-		30E3FE9523C8BEF10003AABA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3FE9423C8BEF10003AABA /* ViewController.swift */; };
 		30E3FE9723C8BEF20003AABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30E3FE9623C8BEF20003AABA /* Assets.xcassets */; };
 		30E3FE9A23C8BEF20003AABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E3FE9823C8BEF20003AABA /* Main.storyboard */; };
+		30E3FEA323C910600003AABA /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3FEA223C910600003AABA /* UserSettings.swift */; };
+		30E3FEA523C91A3E0003AABA /* AppMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3FEA423C91A3E0003AABA /* AppMenu.swift */; };
+		30E3FEA923C92CD00003AABA /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3FEA823C92CD00003AABA /* StatusItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		30E3FE8F23C8BEF10003AABA /* iToilet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iToilet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E3FE9223C8BEF10003AABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		30E3FE9423C8BEF10003AABA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		30E3FE9623C8BEF20003AABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30E3FE9923C8BEF20003AABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30E3FE9B23C8BEF20003AABA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30E3FE9C23C8BEF20003AABA /* iToilet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iToilet.entitlements; sourceTree = "<group>"; };
+		30E3FEA223C910600003AABA /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		30E3FEA423C91A3E0003AABA /* AppMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMenu.swift; sourceTree = "<group>"; };
+		30E3FEA823C92CD00003AABA /* StatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +58,9 @@
 			isa = PBXGroup;
 			children = (
 				30E3FE9223C8BEF10003AABA /* AppDelegate.swift */,
-				30E3FE9423C8BEF10003AABA /* ViewController.swift */,
+				30E3FEA423C91A3E0003AABA /* AppMenu.swift */,
+				30E3FEA823C92CD00003AABA /* StatusItem.swift */,
+				30E3FEA223C910600003AABA /* UserSettings.swift */,
 				30E3FE9623C8BEF20003AABA /* Assets.xcassets */,
 				30E3FE9823C8BEF20003AABA /* Main.storyboard */,
 				30E3FE9B23C8BEF20003AABA /* Info.plist */,
@@ -133,7 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30E3FE9523C8BEF10003AABA /* ViewController.swift in Sources */,
+				30E3FEA323C910600003AABA /* UserSettings.swift in Sources */,
+				30E3FEA923C92CD00003AABA /* StatusItem.swift in Sources */,
+				30E3FEA523C91A3E0003AABA /* AppMenu.swift in Sources */,
 				30E3FE9323C8BEF10003AABA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

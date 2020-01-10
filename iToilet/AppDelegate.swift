@@ -11,16 +11,16 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
+    let appMenu = AppMenu()
+    let statusItem = StatusItem().makeStatusItem()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        
+        statusItem.menu = appMenu.makeMenu()
+        appMenu.setup()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        // Insert code here to tear down your application
     }
-
-
 }
 

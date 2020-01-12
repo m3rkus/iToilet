@@ -19,6 +19,11 @@ struct UserSettings {
         key: "isAutolaunchEnabled",
         defaultValue: false)
     static var isAutolaunchEnabled: Bool
+    
+    @UserSetting(
+        key: "isToiletAvailableCurrentStatus",
+        defaultValue: Optional.none)
+    static var isToiletAvailableCurrentStatus: Bool?
 }
 
 

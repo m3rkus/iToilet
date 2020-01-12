@@ -9,7 +9,10 @@
 import Cocoa
 
 final class AppMenu {
-        
+    
+    // MARK: - Public Properties
+    var onAppQuit: (() -> ())?
+    
     // MARK: - Private Properties
     lazy var notificationMenuItem: NSMenuItem = {
         let menuItem = NSMenuItem(
@@ -87,6 +90,7 @@ final class AppMenu {
     
     @objc func tapQuitButton() {
         
+        onAppQuit?()
         NSApplication.shared.terminate(self)
     }
 }

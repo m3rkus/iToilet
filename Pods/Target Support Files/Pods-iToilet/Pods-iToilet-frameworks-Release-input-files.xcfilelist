@@ -1,3 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-iToilet/Pods-iToilet-frameworks.sh
-${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework
-${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework
+${BUILT_PRODUCTS_DIR}/SwiftMQTT/SwiftMQTT.framework

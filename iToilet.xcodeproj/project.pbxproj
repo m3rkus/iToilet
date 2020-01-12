@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30C9B71823C9D3B40068A5DE /* StatusMQTTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9B71723C9D3B40068A5DE /* StatusMQTTService.swift */; };
+		30C9B71A23CA388D0068A5DE /* MQTTChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9B71923CA388D0068A5DE /* MQTTChannel.swift */; };
+		30C9B71E23CA47780068A5DE /* ToiletLightStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9B71D23CA47780068A5DE /* ToiletLightStatusModel.swift */; };
+		30C9B72023CA485D0068A5DE /* Data+prettyPrintedJSONString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9B71F23CA485D0068A5DE /* Data+prettyPrintedJSONString.swift */; };
 		30E3FE9323C8BEF10003AABA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3FE9223C8BEF10003AABA /* AppDelegate.swift */; };
 		30E3FE9723C8BEF20003AABA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30E3FE9623C8BEF20003AABA /* Assets.xcassets */; };
 		30E3FE9A23C8BEF20003AABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E3FE9823C8BEF20003AABA /* Main.storyboard */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30C9B71723C9D3B40068A5DE /* StatusMQTTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMQTTService.swift; sourceTree = "<group>"; };
+		30C9B71923CA388D0068A5DE /* MQTTChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTChannel.swift; sourceTree = "<group>"; };
+		30C9B71D23CA47780068A5DE /* ToiletLightStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletLightStatusModel.swift; sourceTree = "<group>"; };
+		30C9B71F23CA485D0068A5DE /* Data+prettyPrintedJSONString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+prettyPrintedJSONString.swift"; sourceTree = "<group>"; };
 		30E3FE8F23C8BEF10003AABA /* iToilet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iToilet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E3FE9223C8BEF10003AABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30E3FE9623C8BEF20003AABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +76,10 @@
 				30E3FEA423C91A3E0003AABA /* AppMenu.swift */,
 				30E3FEA823C92CD00003AABA /* StatusItem.swift */,
 				30E3FEA223C910600003AABA /* UserSettings.swift */,
+				30C9B71723C9D3B40068A5DE /* StatusMQTTService.swift */,
+				30C9B71923CA388D0068A5DE /* MQTTChannel.swift */,
+				30C9B71D23CA47780068A5DE /* ToiletLightStatusModel.swift */,
+				30C9B71F23CA485D0068A5DE /* Data+prettyPrintedJSONString.swift */,
 				30E3FE9623C8BEF20003AABA /* Assets.xcassets */,
 				30E3FE9823C8BEF20003AABA /* Main.storyboard */,
 				30E3FE9B23C8BEF20003AABA /* Info.plist */,
@@ -82,7 +94,6 @@
 				609DB282C161BB0345270398 /* Pods-iToilet.debug.xcconfig */,
 				F54D2A0A9CD841399A58DA2B /* Pods-iToilet.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,10 +219,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C9B71E23CA47780068A5DE /* ToiletLightStatusModel.swift in Sources */,
+				30C9B71823C9D3B40068A5DE /* StatusMQTTService.swift in Sources */,
 				30E3FEA323C910600003AABA /* UserSettings.swift in Sources */,
 				30E3FEA923C92CD00003AABA /* StatusItem.swift in Sources */,
 				30E3FEA523C91A3E0003AABA /* AppMenu.swift in Sources */,
+				30C9B72023CA485D0068A5DE /* Data+prettyPrintedJSONString.swift in Sources */,
 				30E3FE9323C8BEF10003AABA /* AppDelegate.swift in Sources */,
+				30C9B71A23CA388D0068A5DE /* MQTTChannel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

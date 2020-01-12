@@ -4,6 +4,6 @@
 target 'iToilet' do
   use_frameworks!
 
-    pod 'CocoaMQTT'
+    pod 'SwiftMQTT'
 
 end

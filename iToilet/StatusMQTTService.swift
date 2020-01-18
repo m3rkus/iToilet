@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftMQTT
+import Repeat
 
 protocol StatusMQTTServiceDelegate: class {
     
@@ -23,6 +24,10 @@ final class StatusMQTTService {
     private let port: UInt16 = 1883
     private let mqttApiKey = "FVRIJXU8MB0L8K5U"
     private let responseFormat = "json"
+    private var isDisconnectInitiatedByApp = false
+    private var reconnectionTimer: Repeater?
+    private var reconnectionTimeInterval: Double = 0
+    private var reconnectionTimeIntervalStep: Double = 5
 
     private lazy var mqttSession: MQTTSession = {
         let session = MQTTSession(
@@ -30,7 +35,7 @@ final class StatusMQTTService {
             port: port,
             clientID: username,
             cleanSession: true,
-            keepAlive: 15,
+            keepAlive: 60,
             useSSL: false
         )
         session.username = username
@@ -47,6 +52,8 @@ final class StatusMQTTService {
                 print("Unable to connect to MQTT Server, error: \(error.localizedDescription)")
             } else {
                 print("Connected to MQTT server")
+                self.reconnectionTimeInterval = 0
+                self.isDisconnectInitiatedByApp = false
                 self.subscribeTo(channel: .toiletLightStatus)
             }
         }
@@ -54,6 +61,7 @@ final class StatusMQTTService {
     
     func disconnect() {
         
+        isDisconnectInitiatedByApp = true
         mqttSession.disconnect()
     }
     
@@ -80,6 +88,17 @@ final class StatusMQTTService {
         }
         return statusValue < 500
     }
+    
+    private func scheduleReconnection() {
+        
+        self.reconnectionTimeInterval += reconnectionTimeIntervalStep
+        print("Schedule server reconnection in \(reconnectionTimeInterval) seconds")
+        self.reconnectionTimer = Repeater.once(after: .seconds(reconnectionTimeInterval)) { [weak self] timer in
+            guard let self = self else { return }
+            print("Trying to reconnect ...")
+            self.connect()
+        }
+    }
 }
 
 // MARK: - MQTTSessionDelegate
@@ -105,6 +124,11 @@ extension StatusMQTTService: MQTTSessionDelegate {
     func mqttDidDisconnect(session: MQTTSession, error: MQTTSessionError) {
         
         print("Disconnect from MQTT server")
+        if !isDisconnectInitiatedByApp {
+            scheduleReconnection()
+        } else {
+            isDisconnectInitiatedByApp = false
+        }
     }
 }
 

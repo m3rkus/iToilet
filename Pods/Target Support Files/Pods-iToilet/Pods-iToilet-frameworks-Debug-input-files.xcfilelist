@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-iToilet/Pods-iToilet-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Repeat/Repeat.framework
 ${BUILT_PRODUCTS_DIR}/SwiftMQTT/SwiftMQTT.framework

@@ -24,7 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             self.statusService.disconnect()
         }
         statusService.delegate = self
-        udpateStatusItem(isToiletAvailable: true)
+        udpateStatusItem(isToiletAvailable: UserSettings.isToiletAvailableCurrentStatus ?? true)
         statusService.connect()
     }
 
@@ -47,14 +47,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSUserNotificationCenter.default.delegate = self
         NSUserNotificationCenter.default.deliver(notification)
     }
-}
-
-// MARK: - StatusMQTTServiceDelegate
-extension AppDelegate: StatusMQTTServiceDelegate {
     
-    func updateStatus(isToiletAvailable: Bool) {
+    private func updateToiletAvailableStatus(isToiletAvailable: Bool, force: Bool = false) {
         
-        if UserSettings.isToiletAvailableCurrentStatus != nil,
+        if !force,
+            UserSettings.isToiletAvailableCurrentStatus != nil,
             UserSettings.isToiletAvailableCurrentStatus == isToiletAvailable {
             return
         }
@@ -63,6 +60,15 @@ extension AppDelegate: StatusMQTTServiceDelegate {
             presentNotification(isToiletAvailable: isToiletAvailable)
         }
         UserSettings.isToiletAvailableCurrentStatus = isToiletAvailable
+    }
+}
+
+// MARK: - StatusMQTTServiceDelegate
+extension AppDelegate: StatusMQTTServiceDelegate {
+    
+    func updateStatus(isToiletAvailable: Bool) {
+        
+        updateToiletAvailableStatus(isToiletAvailable: isToiletAvailable)
     }
 }
 

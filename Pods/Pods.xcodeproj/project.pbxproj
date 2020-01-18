@@ -7,37 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		005D9F2E547456FBAE4348A16880129D /* MQTTPacketFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD6778CEA3E1F79B5B222B7C58EBD0B /* MQTTPacketFactory.swift */; };
-		04557359758F2DBABE819DEBCDBA49AF /* MQTTPacketFixedHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DD28080F50321DFBB588B9D66223C9 /* MQTTPacketFixedHeader.swift */; };
-		059A0F1366493F4B30E981E8D4E091DA /* MQTTUnsubPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EB6CB0D4C396C04612EE13F7952EEBD /* MQTTUnsubPacket.swift */; };
-		0810E0D295BA03E3E5013E42A4DBFCA4 /* MQTTExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B175194B3A57D4C0BC8002F3158661 /* MQTTExtensions.swift */; };
-		3DD9BB52AA5D26B9B3E7D3D10CB49C26 /* MQTTMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC11592784B5A160826FB44154CA127 /* MQTTMessage.swift */; };
+		005D9F2E547456FBAE4348A16880129D /* MQTTPacketFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C8234495A980C8BD968BDFE1D07FE6 /* MQTTPacketFactory.swift */; };
+		04557359758F2DBABE819DEBCDBA49AF /* MQTTPacketFixedHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C762440D3D8E99D23BC339DCEB40F303 /* MQTTPacketFixedHeader.swift */; };
+		059A0F1366493F4B30E981E8D4E091DA /* MQTTUnsubPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FAECF1CD7B3C5E8C2C688DA695D78A4 /* MQTTUnsubPacket.swift */; };
+		0658DFE06609BC1DA880B929CCD74C5C /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D02760392DABA2FCA4D562EE4A83E /* Debouncer.swift */; };
+		0810E0D295BA03E3E5013E42A4DBFCA4 /* MQTTExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D73F0CF137234C594F45A6F60590284 /* MQTTExtensions.swift */; };
+		0CAD01FC81AA4F80AECDEE09C1C456D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64735A976593F155F9461C58AD6FDEE2 /* Foundation.framework */; };
+		192545C722C964144ADE75250D71023F /* Pods-iToilet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19E21910F3691846F54F623FB6F0EF33 /* Pods-iToilet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		20533EFB54ABFCBA840DB65DB451EF54 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A88BC9A09E22966FC557877A938E37 /* Cocoa.framework */; };
+		3DD9BB52AA5D26B9B3E7D3D10CB49C26 /* MQTTMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE84CB282CF450B625598D65FF7B528 /* MQTTMessage.swift */; };
 		40DD5BB1FF75A8FAA55BC32984AD9FBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64735A976593F155F9461C58AD6FDEE2 /* Foundation.framework */; };
-		4D8E8BA9922731502DA270C56CAEF42D /* MQTTPubMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1FCAF16296360D7A4D2CB5109BCDE4 /* MQTTPubMsg.swift */; };
-		5DBF60B76B2374668886FCF61824DF03 /* MQTTConnectPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A47599677DC0EBCF5A7ABD9F6288B2 /* MQTTConnectPacket.swift */; };
-		68856B8415CAC71D167317DD48035316 /* Pods-iToilet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EF31F6B080B77CCD808DF46DC1AAF7 /* Pods-iToilet-dummy.m */; };
-		6EF4979EA5FDC63D30DCD0CAC070BA3A /* MQTTPingResp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399D735971CD70A743EFF3D530A54543 /* MQTTPingResp.swift */; };
-		7C03BFC3887D8DC312D17B9270551CEC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A88BC9A09E22966FC557877A938E37 /* Cocoa.framework */; };
-		7FFD95BBA95D6C513DA9210A161730AB /* SwiftMQTT-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCDF30F4E9FA696E60E9AB46847D2516 /* SwiftMQTT-dummy.m */; };
-		8018B65D29CB0B0B329A2ECC8EE12079 /* MQTTStreamable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174F77F7A9A782B2F883118217E46B0C /* MQTTStreamable.swift */; };
-		818BF7B138DE33DED24861F64D28753E /* MQTTPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0664A57BB6F4797C0A31930924BFC866 /* MQTTPacket.swift */; };
+		4D8E8BA9922731502DA270C56CAEF42D /* MQTTPubMsg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 989D5D465DDAEA286BFB020745B5FB24 /* MQTTPubMsg.swift */; };
+		5629F986DF58442E3277709DFB035EEF /* Repeat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15B0D9A556714FF679E2056C3CC5B76E /* Repeat-dummy.m */; };
+		5DBF60B76B2374668886FCF61824DF03 /* MQTTConnectPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDFC995E2A1D5E7C43FFBDC60874175A /* MQTTConnectPacket.swift */; };
+		5E09B5D2F99ECCEC1EA66093A83BAD96 /* Pods-iToilet-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 70EF31F6B080B77CCD808DF46DC1AAF7 /* Pods-iToilet-dummy.m */; };
+		6EF4979EA5FDC63D30DCD0CAC070BA3A /* MQTTPingResp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25FA1F6E72BCBF6A6135E00B9358A5AF /* MQTTPingResp.swift */; };
+		7FFD95BBA95D6C513DA9210A161730AB /* SwiftMQTT-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD9A9DE953082B5AB8EA0797606940D /* SwiftMQTT-dummy.m */; };
+		8018B65D29CB0B0B329A2ECC8EE12079 /* MQTTStreamable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB798C0314A94F6AABA360625D0EAAA /* MQTTStreamable.swift */; };
+		818BF7B138DE33DED24861F64D28753E /* MQTTPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D8FF4CDD5746B96109AC3990A9B0F /* MQTTPacket.swift */; };
 		88BE349D04A1CA084C3C8AB96E74417E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A88BC9A09E22966FC557877A938E37 /* Cocoa.framework */; };
-		988E3D5948857D84CA2870EF6E04FAB4 /* MQTTSubPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8194BE710E4EAF22C0C5475F6547E80C /* MQTTSubPacket.swift */; };
-		9A9A91DEB203D8BE91DE4C9894B12285 /* SwiftMQTT-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE6F2CE468F4EBB93BB8F5A7D8337BC /* SwiftMQTT-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A143312299B0B7670326A5DB104A67F5 /* MQTTUnSubAckPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DA481702828075420C65E9DE38539F /* MQTTUnSubAckPacket.swift */; };
-		B2050893195F3009BDFDFF27D004EB82 /* Pods-iToilet-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 19E21910F3691846F54F623FB6F0EF33 /* Pods-iToilet-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B797CD783954929618AD4C157D059D22 /* MQTTPublishPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE71A1AB7EB95D442A5715E1CFF71DA /* MQTTPublishPacket.swift */; };
-		C22DF71B72FAF89508C66A772AE03E07 /* MQTTConnAckPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4EE4738DD2E3329073104F608CBA041 /* MQTTConnAckPacket.swift */; };
-		C50E0E88EEB777C2AFE61CB84225AC2A /* MQTTDisconnectPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B8F654C7A414638A372C5C78A0133C /* MQTTDisconnectPacket.swift */; };
-		D0E0A7CBE3C578D76641C22D6658560B /* MQTTPingPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B73D150CC0E29C292CD0F4EB8F7773 /* MQTTPingPacket.swift */; };
-		ED4FF48338A70972AF8339115EB6FEE8 /* MQTTSessionStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7924F1B5BDE5BA324911244B96330966 /* MQTTSessionStream.swift */; };
-		EDBB8C5CCD0A4040A445E96BBF661162 /* MQTTSubAckPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB469E4D786023284D79BD525DA880FC /* MQTTSubAckPacket.swift */; };
-		EF2F3899585BE43669A2B5AFE9BB1691 /* MQTTSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D139438E98D1FD832AC1DE24FFF52C83 /* MQTTSession.swift */; };
-		F545CD0F2555AE8891C69A3524F2D045 /* MQTTPubAck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB25F2CE0F0C6CB646C29774781E171 /* MQTTPubAck.swift */; };
+		988E3D5948857D84CA2870EF6E04FAB4 /* MQTTSubPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCEB9E4667503A4FE75C0A189E97C279 /* MQTTSubPacket.swift */; };
+		9A9A91DEB203D8BE91DE4C9894B12285 /* SwiftMQTT-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9001809BCADEB56373A1F79651BA190B /* SwiftMQTT-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A143312299B0B7670326A5DB104A67F5 /* MQTTUnSubAckPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E62B26E514074D2B82C427C13A78429 /* MQTTUnSubAckPacket.swift */; };
+		AF2276225B6200483DC2C6083778ED81 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2A88BC9A09E22966FC557877A938E37 /* Cocoa.framework */; };
+		B797CD783954929618AD4C157D059D22 /* MQTTPublishPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148970B77926912D0653BEB04DE35594 /* MQTTPublishPacket.swift */; };
+		C22DF71B72FAF89508C66A772AE03E07 /* MQTTConnAckPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC14772458FDB16D186729AFDB85556 /* MQTTConnAckPacket.swift */; };
+		C50E0E88EEB777C2AFE61CB84225AC2A /* MQTTDisconnectPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = D19130DA2A15AA6A3D85A3BD831E56E5 /* MQTTDisconnectPacket.swift */; };
+		D0E0A7CBE3C578D76641C22D6658560B /* MQTTPingPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E5A3A33FE1A8BCDC56795FEB2F58E0 /* MQTTPingPacket.swift */; };
+		D86638AEEF744A5587CEE3BAE94D8ABC /* Throttler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1754C3BBA15E4214552B6924E62646 /* Throttler.swift */; };
+		ED4FF48338A70972AF8339115EB6FEE8 /* MQTTSessionStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCA57593EEA26BE2CB5A2A4020D4411 /* MQTTSessionStream.swift */; };
+		EDBB8C5CCD0A4040A445E96BBF661162 /* MQTTSubAckPacket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 191335619DD484E916181A444D53E6FC /* MQTTSubAckPacket.swift */; };
+		EEDBFEE794358060F7013895D8C22059 /* Repeat-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7DBADF8FEEDAD50E9A9FDC565769F2ED /* Repeat-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EF2F3899585BE43669A2B5AFE9BB1691 /* MQTTSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27367A37C22788F27D56EF9D1155F08D /* MQTTSession.swift */; };
+		F2588F3D3204070EF63084417DDEEF9B /* Repeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = A98C962B5F45373A037891D8413679CD /* Repeater.swift */; };
+		F545CD0F2555AE8891C69A3524F2D045 /* MQTTPubAck.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C4629B3676F79A71EE79AAF10B0F77 /* MQTTPubAck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5B30047561CDF87FDA47E7E899904B6F /* PBXContainerItemProxy */ = {
+		2B1924D29FD671EE2721173D42555F4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4CC186C9E1B14990599481A653997C4;
+			remoteInfo = Repeat;
+		};
+		2BD1BCBD06D714A044E0644E5CA369BD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -47,49 +61,76 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01B73D150CC0E29C292CD0F4EB8F7773 /* MQTTPingPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTPingPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTPingPacket.swift; sourceTree = "<group>"; };
-		0664A57BB6F4797C0A31930924BFC866 /* MQTTPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTPacket.swift; sourceTree = "<group>"; };
-		174F77F7A9A782B2F883118217E46B0C /* MQTTStreamable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTStreamable.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTStreamable.swift; sourceTree = "<group>"; };
+		0301A2460381F1CFAFF6A248A8314F54 /* SwiftMQTT-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMQTT-prefix.pch"; sourceTree = "<group>"; };
+		08769415795DE52781EA8F21B28B637F /* SwiftMQTT.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftMQTT.xcconfig; sourceTree = "<group>"; };
+		148970B77926912D0653BEB04DE35594 /* MQTTPublishPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTPublishPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTPublishPacket.swift; sourceTree = "<group>"; };
+		15B0D9A556714FF679E2056C3CC5B76E /* Repeat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Repeat-dummy.m"; sourceTree = "<group>"; };
+		191335619DD484E916181A444D53E6FC /* MQTTSubAckPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTSubAckPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTSubAckPacket.swift; sourceTree = "<group>"; };
 		19E21910F3691846F54F623FB6F0EF33 /* Pods-iToilet-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iToilet-umbrella.h"; sourceTree = "<group>"; };
-		1EB6CB0D4C396C04612EE13F7952EEBD /* MQTTUnsubPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTUnsubPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTUnsubPacket.swift; sourceTree = "<group>"; };
-		23D2DC89E46F16A187A1033B24CDCF6D /* SwiftMQTT.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftMQTT.modulemap; sourceTree = "<group>"; };
-		2C731629728C4B1A7F8B20545AC72B8E /* SwiftMQTT-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMQTT-prefix.pch"; sourceTree = "<group>"; };
+		25FA1F6E72BCBF6A6135E00B9358A5AF /* MQTTPingResp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTPingResp.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTPingResp.swift; sourceTree = "<group>"; };
+		27367A37C22788F27D56EF9D1155F08D /* MQTTSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTSession.swift; path = SwiftMQTT/SwiftMQTT/MQTTSession.swift; sourceTree = "<group>"; };
+		31AC37C412B61705E347CB9ED9E491C2 /* Repeat-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Repeat-Info.plist"; sourceTree = "<group>"; };
 		39220AAE8D8F666FC235C8DAC5BFE1F1 /* Pods-iToilet.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iToilet.modulemap"; sourceTree = "<group>"; };
-		399D735971CD70A743EFF3D530A54543 /* MQTTPingResp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTPingResp.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTPingResp.swift; sourceTree = "<group>"; };
+		3B1754C3BBA15E4214552B6924E62646 /* Throttler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Throttler.swift; path = Sources/Repeat/Throttler.swift; sourceTree = "<group>"; };
+		3CD9A9DE953082B5AB8EA0797606940D /* SwiftMQTT-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftMQTT-dummy.m"; sourceTree = "<group>"; };
+		3D73F0CF137234C594F45A6F60590284 /* MQTTExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTExtensions.swift; path = SwiftMQTT/SwiftMQTT/MQTTExtensions.swift; sourceTree = "<group>"; };
+		3E62B26E514074D2B82C427C13A78429 /* MQTTUnSubAckPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTUnSubAckPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTUnSubAckPacket.swift; sourceTree = "<group>"; };
 		46E3DF4CF7992B5307848CD46CA3C6BC /* SwiftMQTT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftMQTT.framework; path = SwiftMQTT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4842D23013F06DBE2022BD9E1EB46380 /* Pods_iToilet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iToilet.framework; path = "Pods-iToilet.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4AB25F2CE0F0C6CB646C29774781E171 /* MQTTPubAck.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTPubAck.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTPubAck.swift; sourceTree = "<group>"; };
-		4CD6778CEA3E1F79B5B222B7C58EBD0B /* MQTTPacketFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTPacketFactory.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTPacketFactory.swift; sourceTree = "<group>"; };
+		4D1D1C1BD380D604F2980CCA8FD97A0C /* Repeat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Repeat.xcconfig; sourceTree = "<group>"; };
 		50D26BBDC7E6AF3D95B2A51D367D8FD5 /* Pods-iToilet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iToilet.debug.xcconfig"; sourceTree = "<group>"; };
+		51C8234495A980C8BD968BDFE1D07FE6 /* MQTTPacketFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTPacketFactory.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTPacketFactory.swift; sourceTree = "<group>"; };
+		5CB798C0314A94F6AABA360625D0EAAA /* MQTTStreamable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTStreamable.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTStreamable.swift; sourceTree = "<group>"; };
+		5FAECF1CD7B3C5E8C2C688DA695D78A4 /* MQTTUnsubPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTUnsubPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTUnsubPacket.swift; sourceTree = "<group>"; };
+		63FC4334A9AA8D257C6D089EEEE48D16 /* Repeat.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Repeat.modulemap; sourceTree = "<group>"; };
 		64735A976593F155F9461C58AD6FDEE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		70B4CA7839AF99B9A31DAC97204733AB /* SwiftMQTT.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftMQTT.modulemap; sourceTree = "<group>"; };
 		70EF31F6B080B77CCD808DF46DC1AAF7 /* Pods-iToilet-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iToilet-dummy.m"; sourceTree = "<group>"; };
+		77916ECE2E78BDF079A64D3F847D9E2E /* Repeat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Repeat.framework; path = Repeat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		787B26536C0D7D8DC7256364F0B370E2 /* Pods-iToilet-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iToilet-frameworks.sh"; sourceTree = "<group>"; };
-		78B175194B3A57D4C0BC8002F3158661 /* MQTTExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTExtensions.swift; path = SwiftMQTT/SwiftMQTT/MQTTExtensions.swift; sourceTree = "<group>"; };
-		7924F1B5BDE5BA324911244B96330966 /* MQTTSessionStream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTSessionStream.swift; path = SwiftMQTT/SwiftMQTT/MQTTSessionStream.swift; sourceTree = "<group>"; };
-		7FC11592784B5A160826FB44154CA127 /* MQTTMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTMessage.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTMessage.swift; sourceTree = "<group>"; };
-		8194BE710E4EAF22C0C5475F6547E80C /* MQTTSubPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTSubPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTSubPacket.swift; sourceTree = "<group>"; };
+		7B9D02760392DABA2FCA4D562EE4A83E /* Debouncer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debouncer.swift; path = Sources/Repeat/Debouncer.swift; sourceTree = "<group>"; };
+		7DBADF8FEEDAD50E9A9FDC565769F2ED /* Repeat-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Repeat-umbrella.h"; sourceTree = "<group>"; };
 		8786281391D19744432A9EBD384E4FB2 /* Pods-iToilet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iToilet.release.xcconfig"; sourceTree = "<group>"; };
-		88DD28080F50321DFBB588B9D66223C9 /* MQTTPacketFixedHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTPacketFixedHeader.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTPacketFixedHeader.swift; sourceTree = "<group>"; };
+		9001809BCADEB56373A1F79651BA190B /* SwiftMQTT-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMQTT-umbrella.h"; sourceTree = "<group>"; };
+		989D5D465DDAEA286BFB020745B5FB24 /* MQTTPubMsg.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTPubMsg.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTPubMsg.swift; sourceTree = "<group>"; };
 		99A91321184E938237A98B1A63552629 /* Pods-iToilet-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iToilet-Info.plist"; sourceTree = "<group>"; };
-		9CE71A1AB7EB95D442A5715E1CFF71DA /* MQTTPublishPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTPublishPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTPublishPacket.swift; sourceTree = "<group>"; };
+		9BCA57593EEA26BE2CB5A2A4020D4411 /* MQTTSessionStream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTSessionStream.swift; path = SwiftMQTT/SwiftMQTT/MQTTSessionStream.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A3A47599677DC0EBCF5A7ABD9F6288B2 /* MQTTConnectPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTConnectPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTConnectPacket.swift; sourceTree = "<group>"; };
-		AA1FCAF16296360D7A4D2CB5109BCDE4 /* MQTTPubMsg.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTPubMsg.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTPubMsg.swift; sourceTree = "<group>"; };
-		B5B8F654C7A414638A372C5C78A0133C /* MQTTDisconnectPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTDisconnectPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTDisconnectPacket.swift; sourceTree = "<group>"; };
-		B7DA481702828075420C65E9DE38539F /* MQTTUnSubAckPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTUnSubAckPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTUnSubAckPacket.swift; sourceTree = "<group>"; };
-		BB469E4D786023284D79BD525DA880FC /* MQTTSubAckPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTSubAckPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTSubAckPacket.swift; sourceTree = "<group>"; };
-		C457CA0466EB318C68514B94E56CD623 /* SwiftMQTT-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftMQTT-Info.plist"; sourceTree = "<group>"; };
-		CCDF30F4E9FA696E60E9AB46847D2516 /* SwiftMQTT-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftMQTT-dummy.m"; sourceTree = "<group>"; };
+		A4C4629B3676F79A71EE79AAF10B0F77 /* MQTTPubAck.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTPubAck.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTPubAck.swift; sourceTree = "<group>"; };
+		A98C962B5F45373A037891D8413679CD /* Repeater.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Repeater.swift; path = Sources/Repeat/Repeater.swift; sourceTree = "<group>"; };
+		AFE84CB282CF450B625598D65FF7B528 /* MQTTMessage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTMessage.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTMessage.swift; sourceTree = "<group>"; };
+		B337722F88E7DE9B5B2E4FDCBE48D306 /* SwiftMQTT-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftMQTT-Info.plist"; sourceTree = "<group>"; };
+		B4E5A3A33FE1A8BCDC56795FEB2F58E0 /* MQTTPingPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTPingPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTPingPacket.swift; sourceTree = "<group>"; };
+		C762440D3D8E99D23BC339DCEB40F303 /* MQTTPacketFixedHeader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTPacketFixedHeader.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTPacketFixedHeader.swift; sourceTree = "<group>"; };
+		CCEB9E4667503A4FE75C0A189E97C279 /* MQTTSubPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTSubPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTSubPacket.swift; sourceTree = "<group>"; };
 		CD667E3E2D12B2F3363255E8BB25E8FD /* Pods-iToilet-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iToilet-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D139438E98D1FD832AC1DE24FFF52C83 /* MQTTSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTSession.swift; path = SwiftMQTT/SwiftMQTT/MQTTSession.swift; sourceTree = "<group>"; };
-		D4EE4738DD2E3329073104F608CBA041 /* MQTTConnAckPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTConnAckPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTConnAckPacket.swift; sourceTree = "<group>"; };
+		D19130DA2A15AA6A3D85A3BD831E56E5 /* MQTTDisconnectPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTDisconnectPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTDisconnectPacket.swift; sourceTree = "<group>"; };
+		DDFC995E2A1D5E7C43FFBDC60874175A /* MQTTConnectPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTConnectPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTConnectPacket.swift; sourceTree = "<group>"; };
 		E2A88BC9A09E22966FC557877A938E37 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
-		E3D60D06278AB5E2CAB8FFDF19AAE5F9 /* SwiftMQTT.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftMQTT.xcconfig; sourceTree = "<group>"; };
-		EDE6F2CE468F4EBB93BB8F5A7D8337BC /* SwiftMQTT-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftMQTT-umbrella.h"; sourceTree = "<group>"; };
+		EDC14772458FDB16D186729AFDB85556 /* MQTTConnAckPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTConnAckPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTConnAckPacket.swift; sourceTree = "<group>"; };
+		F0CF30036AEC65FAC2BD668752C2420C /* Repeat-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Repeat-prefix.pch"; sourceTree = "<group>"; };
 		F1FED5EE28DB181682A46E2B15411BB6 /* Pods-iToilet-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iToilet-acknowledgements.plist"; sourceTree = "<group>"; };
+		FB3D8FF4CDD5746B96109AC3990A9B0F /* MQTTPacket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MQTTPacket.swift; path = SwiftMQTT/SwiftMQTT/Models/MQTTPacket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		119E80D603939C5E8CA76491DCBB781B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF2276225B6200483DC2C6083778ED81 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1DC2247419AC6F384D3E4055BD543681 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20533EFB54ABFCBA840DB65DB451EF54 /* Cocoa.framework in Frameworks */,
+				0CAD01FC81AA4F80AECDEE09C1C456D6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A359A23BB45F4DC6240C8188CE5EFC0F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -99,58 +140,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EC56A68285D2CC36EEA61CBE5DD13C31 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7C03BFC3887D8DC312D17B9270551CEC /* Cocoa.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B759389D3999A307D5E642F059ABEB8 /* SwiftMQTT */ = {
+		2893FED33E827445CD6D9CC7C78AB6DC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D4EE4738DD2E3329073104F608CBA041 /* MQTTConnAckPacket.swift */,
-				A3A47599677DC0EBCF5A7ABD9F6288B2 /* MQTTConnectPacket.swift */,
-				B5B8F654C7A414638A372C5C78A0133C /* MQTTDisconnectPacket.swift */,
-				78B175194B3A57D4C0BC8002F3158661 /* MQTTExtensions.swift */,
-				7FC11592784B5A160826FB44154CA127 /* MQTTMessage.swift */,
-				0664A57BB6F4797C0A31930924BFC866 /* MQTTPacket.swift */,
-				4CD6778CEA3E1F79B5B222B7C58EBD0B /* MQTTPacketFactory.swift */,
-				88DD28080F50321DFBB588B9D66223C9 /* MQTTPacketFixedHeader.swift */,
-				01B73D150CC0E29C292CD0F4EB8F7773 /* MQTTPingPacket.swift */,
-				399D735971CD70A743EFF3D530A54543 /* MQTTPingResp.swift */,
-				4AB25F2CE0F0C6CB646C29774781E171 /* MQTTPubAck.swift */,
-				9CE71A1AB7EB95D442A5715E1CFF71DA /* MQTTPublishPacket.swift */,
-				AA1FCAF16296360D7A4D2CB5109BCDE4 /* MQTTPubMsg.swift */,
-				D139438E98D1FD832AC1DE24FFF52C83 /* MQTTSession.swift */,
-				7924F1B5BDE5BA324911244B96330966 /* MQTTSessionStream.swift */,
-				174F77F7A9A782B2F883118217E46B0C /* MQTTStreamable.swift */,
-				BB469E4D786023284D79BD525DA880FC /* MQTTSubAckPacket.swift */,
-				8194BE710E4EAF22C0C5475F6547E80C /* MQTTSubPacket.swift */,
-				B7DA481702828075420C65E9DE38539F /* MQTTUnSubAckPacket.swift */,
-				1EB6CB0D4C396C04612EE13F7952EEBD /* MQTTUnsubPacket.swift */,
-				243661258FBDBBD1C68DA9295917F4B5 /* Support Files */,
+				3A345B12F377506D9FA63C52CEF3786A /* Repeat */,
+				703EED079952FF1F27AC6A2CC5D3D713 /* SwiftMQTT */,
 			);
-			name = SwiftMQTT;
-			path = SwiftMQTT;
-			sourceTree = "<group>";
-		};
-		243661258FBDBBD1C68DA9295917F4B5 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				23D2DC89E46F16A187A1033B24CDCF6D /* SwiftMQTT.modulemap */,
-				E3D60D06278AB5E2CAB8FFDF19AAE5F9 /* SwiftMQTT.xcconfig */,
-				CCDF30F4E9FA696E60E9AB46847D2516 /* SwiftMQTT-dummy.m */,
-				C457CA0466EB318C68514B94E56CD623 /* SwiftMQTT-Info.plist */,
-				2C731629728C4B1A7F8B20545AC72B8E /* SwiftMQTT-prefix.pch */,
-				EDE6F2CE468F4EBB93BB8F5A7D8337BC /* SwiftMQTT-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftMQTT";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		30E35849398612055FDD44A6927269DD /* Pods-iToilet */ = {
@@ -170,13 +169,59 @@
 			path = "Target Support Files/Pods-iToilet";
 			sourceTree = "<group>";
 		};
-		3E0C1010B9491077ED22EC702A8D3126 /* Products */ = {
+		38BAC89E980160CC6A804B41AC31E597 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4842D23013F06DBE2022BD9E1EB46380 /* Pods_iToilet.framework */,
-				46E3DF4CF7992B5307848CD46CA3C6BC /* SwiftMQTT.framework */,
+				70B4CA7839AF99B9A31DAC97204733AB /* SwiftMQTT.modulemap */,
+				08769415795DE52781EA8F21B28B637F /* SwiftMQTT.xcconfig */,
+				3CD9A9DE953082B5AB8EA0797606940D /* SwiftMQTT-dummy.m */,
+				B337722F88E7DE9B5B2E4FDCBE48D306 /* SwiftMQTT-Info.plist */,
+				0301A2460381F1CFAFF6A248A8314F54 /* SwiftMQTT-prefix.pch */,
+				9001809BCADEB56373A1F79651BA190B /* SwiftMQTT-umbrella.h */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftMQTT";
+			sourceTree = "<group>";
+		};
+		3A345B12F377506D9FA63C52CEF3786A /* Repeat */ = {
+			isa = PBXGroup;
+			children = (
+				7B9D02760392DABA2FCA4D562EE4A83E /* Debouncer.swift */,
+				A98C962B5F45373A037891D8413679CD /* Repeater.swift */,
+				3B1754C3BBA15E4214552B6924E62646 /* Throttler.swift */,
+				B9898338F14059509F3B2284FC4A5F4B /* Support Files */,
+			);
+			name = Repeat;
+			path = Repeat;
+			sourceTree = "<group>";
+		};
+		703EED079952FF1F27AC6A2CC5D3D713 /* SwiftMQTT */ = {
+			isa = PBXGroup;
+			children = (
+				EDC14772458FDB16D186729AFDB85556 /* MQTTConnAckPacket.swift */,
+				DDFC995E2A1D5E7C43FFBDC60874175A /* MQTTConnectPacket.swift */,
+				D19130DA2A15AA6A3D85A3BD831E56E5 /* MQTTDisconnectPacket.swift */,
+				3D73F0CF137234C594F45A6F60590284 /* MQTTExtensions.swift */,
+				AFE84CB282CF450B625598D65FF7B528 /* MQTTMessage.swift */,
+				FB3D8FF4CDD5746B96109AC3990A9B0F /* MQTTPacket.swift */,
+				51C8234495A980C8BD968BDFE1D07FE6 /* MQTTPacketFactory.swift */,
+				C762440D3D8E99D23BC339DCEB40F303 /* MQTTPacketFixedHeader.swift */,
+				B4E5A3A33FE1A8BCDC56795FEB2F58E0 /* MQTTPingPacket.swift */,
+				25FA1F6E72BCBF6A6135E00B9358A5AF /* MQTTPingResp.swift */,
+				A4C4629B3676F79A71EE79AAF10B0F77 /* MQTTPubAck.swift */,
+				148970B77926912D0653BEB04DE35594 /* MQTTPublishPacket.swift */,
+				989D5D465DDAEA286BFB020745B5FB24 /* MQTTPubMsg.swift */,
+				27367A37C22788F27D56EF9D1155F08D /* MQTTSession.swift */,
+				9BCA57593EEA26BE2CB5A2A4020D4411 /* MQTTSessionStream.swift */,
+				5CB798C0314A94F6AABA360625D0EAAA /* MQTTStreamable.swift */,
+				191335619DD484E916181A444D53E6FC /* MQTTSubAckPacket.swift */,
+				CCEB9E4667503A4FE75C0A189E97C279 /* MQTTSubPacket.swift */,
+				3E62B26E514074D2B82C427C13A78429 /* MQTTUnSubAckPacket.swift */,
+				5FAECF1CD7B3C5E8C2C688DA695D78A4 /* MQTTUnsubPacket.swift */,
+				38BAC89E980160CC6A804B41AC31E597 /* Support Files */,
+			);
+			name = SwiftMQTT;
+			path = SwiftMQTT;
 			sourceTree = "<group>";
 		};
 		7135134BA0D7A99E01A195554F697870 /* Targets Support Files */ = {
@@ -185,6 +230,20 @@
 				30E35849398612055FDD44A6927269DD /* Pods-iToilet */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B9898338F14059509F3B2284FC4A5F4B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				63FC4334A9AA8D257C6D089EEEE48D16 /* Repeat.modulemap */,
+				4D1D1C1BD380D604F2980CCA8FD97A0C /* Repeat.xcconfig */,
+				15B0D9A556714FF679E2056C3CC5B76E /* Repeat-dummy.m */,
+				31AC37C412B61705E347CB9ED9E491C2 /* Repeat-Info.plist */,
+				F0CF30036AEC65FAC2BD668752C2420C /* Repeat-prefix.pch */,
+				7DBADF8FEEDAD50E9A9FDC565769F2ED /* Repeat-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Repeat";
 			sourceTree = "<group>";
 		};
 		BE7E6DB4EC06C9746B1E83B7AE7EA44D /* OS X */ = {
@@ -204,12 +263,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CAD101C6E098AF972AC6117444E1AF28 /* Pods */ = {
+		C2B04642C31FCF1F4DF5876372F6FA2D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B759389D3999A307D5E642F059ABEB8 /* SwiftMQTT */,
+				4842D23013F06DBE2022BD9E1EB46380 /* Pods_iToilet.framework */,
+				77916ECE2E78BDF079A64D3F847D9E2E /* Repeat.framework */,
+				46E3DF4CF7992B5307848CD46CA3C6BC /* SwiftMQTT.framework */,
 			);
-			name = Pods;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -217,8 +278,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				C080C886C9E2F80D52E3E86A62E5B711 /* Frameworks */,
-				CAD101C6E098AF972AC6117444E1AF28 /* Pods */,
-				3E0C1010B9491077ED22EC702A8D3126 /* Products */,
+				2893FED33E827445CD6D9CC7C78AB6DC /* Pods */,
+				C2B04642C31FCF1F4DF5876372F6FA2D /* Products */,
 				7135134BA0D7A99E01A195554F697870 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -234,11 +295,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C161E11C8C89BE82A4DD332BAB1F2286 /* Headers */ = {
+		EF68A28DE86586A6AA3832E46C04A77F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2050893195F3009BDFDFF27D004EB82 /* Pods-iToilet-umbrella.h in Headers */,
+				EEDBFEE794358060F7013895D8C22059 /* Repeat-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB65B8842E1E3F8644EDF5921AAF5300 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				192545C722C964144ADE75250D71023F /* Pods-iToilet-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,17 +316,18 @@
 /* Begin PBXNativeTarget section */
 		3698A39C1A71D00FFF7F76A2EABA6CDB /* Pods-iToilet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B6E3F0AD0DA600E286C5832D40BDBE59 /* Build configuration list for PBXNativeTarget "Pods-iToilet" */;
+			buildConfigurationList = 88960FD035A531D13D114C9AC564FA8A /* Build configuration list for PBXNativeTarget "Pods-iToilet" */;
 			buildPhases = (
-				C161E11C8C89BE82A4DD332BAB1F2286 /* Headers */,
-				F49AD33DEC9F7E78785D002BFBE4C836 /* Sources */,
-				EC56A68285D2CC36EEA61CBE5DD13C31 /* Frameworks */,
-				B7CD84CDC06DCA1ACB96496C5E968034 /* Resources */,
+				FB65B8842E1E3F8644EDF5921AAF5300 /* Headers */,
+				CCBC0AE7D22EE8BE0C9CBA063F91C5B7 /* Sources */,
+				119E80D603939C5E8CA76491DCBB781B /* Frameworks */,
+				C993C81124BA8EE42DBD83A798A850E2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D022BD1E9712712C02BBDD51BB3FCEC2 /* PBXTargetDependency */,
+				5B41838B4E1BA64E313C891B12BBAC63 /* PBXTargetDependency */,
+				3FE6FDE5137138A9153346AE44B557D1 /* PBXTargetDependency */,
 			);
 			name = "Pods-iToilet";
 			productName = "Pods-iToilet";
@@ -282,6 +352,24 @@
 			productReference = 46E3DF4CF7992B5307848CD46CA3C6BC /* SwiftMQTT.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		F4CC186C9E1B14990599481A653997C4 /* Repeat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7222B7AF319DD6EC70930651A6B725E1 /* Build configuration list for PBXNativeTarget "Repeat" */;
+			buildPhases = (
+				EF68A28DE86586A6AA3832E46C04A77F /* Headers */,
+				799960188D7FE206238172040EB93D0F /* Sources */,
+				1DC2247419AC6F384D3E4055BD543681 /* Frameworks */,
+				30D0E29563253A9F7D885C3699336517 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Repeat;
+			productName = Repeat;
+			productReference = 77916ECE2E78BDF079A64D3F847D9E2E /* Repeat.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -300,17 +388,25 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 3E0C1010B9491077ED22EC702A8D3126 /* Products */;
+			productRefGroup = C2B04642C31FCF1F4DF5876372F6FA2D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				3698A39C1A71D00FFF7F76A2EABA6CDB /* Pods-iToilet */,
+				F4CC186C9E1B14990599481A653997C4 /* Repeat */,
 				A7B93C1CDFEE5595AD51E6E355B71A1B /* SwiftMQTT */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		30D0E29563253A9F7D885C3699336517 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7FBF1202AF778FDD6709BF3997A5A115 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -318,7 +414,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B7CD84CDC06DCA1ACB96496C5E968034 /* Resources */ = {
+		C993C81124BA8EE42DBD83A798A850E2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -328,11 +424,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F49AD33DEC9F7E78785D002BFBE4C836 /* Sources */ = {
+		799960188D7FE206238172040EB93D0F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68856B8415CAC71D167317DD48035316 /* Pods-iToilet-dummy.m in Sources */,
+				0658DFE06609BC1DA880B929CCD74C5C /* Debouncer.swift in Sources */,
+				5629F986DF58442E3277709DFB035EEF /* Repeat-dummy.m in Sources */,
+				F2588F3D3204070EF63084417DDEEF9B /* Repeater.swift in Sources */,
+				D86638AEEF744A5587CEE3BAE94D8ABC /* Throttler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCBC0AE7D22EE8BE0C9CBA063F91C5B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E09B5D2F99ECCEC1EA66093A83BAD96 /* Pods-iToilet-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,11 +474,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D022BD1E9712712C02BBDD51BB3FCEC2 /* PBXTargetDependency */ = {
+		3FE6FDE5137138A9153346AE44B557D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftMQTT;
 			target = A7B93C1CDFEE5595AD51E6E355B71A1B /* SwiftMQTT */;
-			targetProxy = 5B30047561CDF87FDA47E7E899904B6F /* PBXContainerItemProxy */;
+			targetProxy = 2BD1BCBD06D714A044E0644E5CA369BD /* PBXContainerItemProxy */;
+		};
+		5B41838B4E1BA64E313C891B12BBAC63 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Repeat;
+			target = F4CC186C9E1B14990599481A653997C4 /* Repeat */;
+			targetProxy = 2B1924D29FD671EE2721173D42555F4F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -436,7 +549,7 @@
 			};
 			name = Release;
 		};
-		4E5A5157D90230711F15D3FDD2561C59 /* Debug */ = {
+		3F2FC18681A23629DBEA2366B6F045C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 50D26BBDC7E6AF3D95B2A51D367D8FD5 /* Pods-iToilet.debug.xcconfig */;
 			buildSettings = {
@@ -476,7 +589,7 @@
 			};
 			name = Debug;
 		};
-		5DD95C2FFB6B695D47A0F6E64897A655 /* Release */ = {
+		518F890BCF6D8B815F9A34DE2F72CB93 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8786281391D19744432A9EBD384E4FB2 /* Pods-iToilet.release.xcconfig */;
 			buildSettings = {
@@ -582,7 +695,7 @@
 		};
 		88AEC32EAE192E733D814DE15916B94A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3D60D06278AB5E2CAB8FFDF19AAE5F9 /* SwiftMQTT.xcconfig */;
+			baseConfigurationReference = 08769415795DE52781EA8F21B28B637F /* SwiftMQTT.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -620,7 +733,7 @@
 		};
 		C9A4DC3B4445C313A1EAEA542BC72F0E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E3D60D06278AB5E2CAB8FFDF19AAE5F9 /* SwiftMQTT.xcconfig */;
+			baseConfigurationReference = 08769415795DE52781EA8F21B28B637F /* SwiftMQTT.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -656,6 +769,82 @@
 			};
 			name = Release;
 		};
+		D1ED208138FF2BE17D90742C277E3A98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D1D1C1BD380D604F2980CCA8FD97A0C /* Repeat.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Repeat/Repeat-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Repeat/Repeat-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14.4;
+				MODULEMAP_FILE = "Target Support Files/Repeat/Repeat.modulemap";
+				PRODUCT_MODULE_NAME = Repeat;
+				PRODUCT_NAME = Repeat;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FA4E02A6315549E1D9D0C81591FE13D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D1D1C1BD380D604F2980CCA8FD97A0C /* Repeat.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/Repeat/Repeat-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Repeat/Repeat-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14.4;
+				MODULEMAP_FILE = "Target Support Files/Repeat/Repeat.modulemap";
+				PRODUCT_MODULE_NAME = Repeat;
+				PRODUCT_NAME = Repeat;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -677,11 +866,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B6E3F0AD0DA600E286C5832D40BDBE59 /* Build configuration list for PBXNativeTarget "Pods-iToilet" */ = {
+		7222B7AF319DD6EC70930651A6B725E1 /* Build configuration list for PBXNativeTarget "Repeat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4E5A5157D90230711F15D3FDD2561C59 /* Debug */,
-				5DD95C2FFB6B695D47A0F6E64897A655 /* Release */,
+				FA4E02A6315549E1D9D0C81591FE13D8 /* Debug */,
+				D1ED208138FF2BE17D90742C277E3A98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88960FD035A531D13D114C9AC564FA8A /* Build configuration list for PBXNativeTarget "Pods-iToilet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F2FC18681A23629DBEA2366B6F045C5 /* Debug */,
+				518F890BCF6D8B815F9A34DE2F72CB93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

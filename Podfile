@@ -5,5 +5,6 @@ target 'iToilet' do
   use_frameworks!
 
     pod 'SwiftMQTT'
+    pod 'Repeat'
 
 end

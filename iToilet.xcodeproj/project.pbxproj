@@ -18,6 +18,7 @@
 		30E3FEA523C91A3E0003AABA /* AppMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3FEA423C91A3E0003AABA /* AppMenu.swift */; };
 		30E3FEA923C92CD00003AABA /* StatusItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E3FEA823C92CD00003AABA /* StatusItem.swift */; };
 		3644C74969F2F95862B7AF67 /* Pods_iToilet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F1767CCD6394BABB389A1B0 /* Pods_iToilet.framework */; };
+		8B40D16423D6413200095BF5 /* RSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B40D16323D6413200095BF5 /* RSLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		30E3FEA823C92CD00003AABA /* StatusItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusItem.swift; sourceTree = "<group>"; };
 		609DB282C161BB0345270398 /* Pods-iToilet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iToilet.debug.xcconfig"; path = "Target Support Files/Pods-iToilet/Pods-iToilet.debug.xcconfig"; sourceTree = "<group>"; };
 		7F1767CCD6394BABB389A1B0 /* Pods_iToilet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iToilet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B40D16323D6413200095BF5 /* RSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSLog.swift; sourceTree = "<group>"; };
 		F54D2A0A9CD841399A58DA2B /* Pods-iToilet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iToilet.release.xcconfig"; path = "Target Support Files/Pods-iToilet/Pods-iToilet.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,6 +82,7 @@
 				30C9B71923CA388D0068A5DE /* MQTTChannel.swift */,
 				30C9B71D23CA47780068A5DE /* ToiletLightStatusModel.swift */,
 				30C9B71F23CA485D0068A5DE /* Data+prettyPrintedJSONString.swift */,
+				8B40D16323D6413200095BF5 /* RSLog.swift */,
 				30E3FE9623C8BEF20003AABA /* Assets.xcassets */,
 				30E3FE9823C8BEF20003AABA /* Main.storyboard */,
 				30E3FE9B23C8BEF20003AABA /* Info.plist */,
@@ -223,6 +226,7 @@
 				30C9B71823C9D3B40068A5DE /* StatusMQTTService.swift in Sources */,
 				30E3FEA323C910600003AABA /* UserSettings.swift in Sources */,
 				30E3FEA923C92CD00003AABA /* StatusItem.swift in Sources */,
+				8B40D16423D6413200095BF5 /* RSLog.swift in Sources */,
 				30E3FEA523C91A3E0003AABA /* AppMenu.swift in Sources */,
 				30C9B72023CA485D0068A5DE /* Data+prettyPrintedJSONString.swift in Sources */,
 				30E3FE9323C8BEF10003AABA /* AppDelegate.swift in Sources */,

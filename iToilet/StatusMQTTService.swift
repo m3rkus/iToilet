@@ -49,9 +49,9 @@ final class StatusMQTTService {
         mqttSession.connect { [weak self] error in
             guard let self = self else { return }
             if error != .none {
-                print("Unable to connect to MQTT Server, error: \(error.localizedDescription)")
+                log.error("Unable to connect to MQTT Server, error: \(error.localizedDescription)", .network)
             } else {
-                print("Connected to MQTT server")
+                log.info("Connected to MQTT server", .network)
                 self.reconnectionTimeInterval = 0
                 self.isDisconnectInitiatedByApp = false
                 self.subscribeTo(channel: .toiletLightStatus)
@@ -73,9 +73,9 @@ final class StatusMQTTService {
             delivering: .atMostOnce,
             completion: { error in
                 if error != .none {
-                    print("Unable to subscribe to channel, error: \(error.localizedDescription)")
+                    log.error("Unable to subscribe to channel, error: \(error.localizedDescription)", .network)
                 } else {
-                    print("Subscribed to channel")
+                    log.info("Subscribed to channel", .network)
                 }
         })
     }
@@ -83,7 +83,7 @@ final class StatusMQTTService {
     private func isToiletAvailable(model: ToiletLightStatusModel) -> Bool {
         
         guard let statusValue = Double(model.status) else {
-            print("Unable to convert status string to double value")
+            log.error("Unable to convert status string to double value", .network)
             return true
         }
         return statusValue < 500
@@ -92,10 +92,10 @@ final class StatusMQTTService {
     private func scheduleReconnection() {
         
         self.reconnectionTimeInterval += reconnectionTimeIntervalStep
-        print("Schedule server reconnection in \(reconnectionTimeInterval) seconds")
+        log.info("Schedule server reconnection in \(reconnectionTimeInterval) seconds", .network)
         self.reconnectionTimer = Repeater.once(after: .seconds(reconnectionTimeInterval)) { [weak self] timer in
             guard let self = self else { return }
-            print("Trying to reconnect ...")
+            log.info("Trying to reconnect ...", .network)
             self.connect()
         }
     }
@@ -107,23 +107,23 @@ extension StatusMQTTService: MQTTSessionDelegate {
     func mqttDidReceive(message: MQTTMessage, from session: MQTTSession) {
         
         do {
-            print(message.payload.prettyPrintedJSONString)
+            log.info(String(message.payload.prettyPrintedJSONString), .network)
             let model = try JSONDecoder().decode(ToiletLightStatusModel.self, from: message.payload)
             delegate?.updateStatus(isToiletAvailable: isToiletAvailable(model: model))
         } catch {
-            print("Unable to decode payload: \(error.localizedDescription)")
+            log.error("Unable to decode payload: \(error.localizedDescription)", .network)
             delegate?.updateStatus(isToiletAvailable: true)
         }
     }
     
     func mqttDidAcknowledgePing(from session: MQTTSession) {
         
-        print("MQTT session keep alive ping")
+        log.info("MQTT session keep alive ping", .network)
     }
     
     func mqttDidDisconnect(session: MQTTSession, error: MQTTSessionError) {
         
-        print("Disconnect from MQTT server")
+        log.info("Disconnect from MQTT server", .network)
         if !isDisconnectInitiatedByApp {
             scheduleReconnection()
         } else {

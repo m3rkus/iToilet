@@ -74,7 +74,7 @@ struct CodableUserSetting<T: Codable> {
                 let value = try JSONDecoder().decode(T.self, from: data)
                 return value
             } catch {
-                print("ERROR: Unable to decode JSON of type \(T.self)")
+                log.error("Unable to decode JSON of type \(T.self)", .general)
                 return defaultValue
             }
         }
@@ -83,7 +83,7 @@ struct CodableUserSetting<T: Codable> {
                 let data = try JSONEncoder().encode(newValue)
                 UserDefaults.standard.set(data, forKey: key)
             } catch {
-                print("ERROR: Unable to encode JSON of type \(T.self)")
+                log.error("Unable to encode JSON of type \(T.self)", .general)
             }
         }
     }

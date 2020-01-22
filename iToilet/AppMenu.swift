@@ -7,7 +7,6 @@
 //
 
 import Cocoa
-import LaunchAtLogin
 
 final class AppMenu {
     
@@ -79,7 +78,6 @@ final class AppMenu {
         
         isAutolaunchEnabled.toggle()
         UserSettings.isAutolaunchEnabled = isAutolaunchEnabled
-        LaunchAtLogin.isEnabled = isAutolaunchEnabled
         updateAutolaunchButtonState()
     }
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30AC60BF23D7843F0045BE40 /* LaunchAtLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AC60BE23D7843F0045BE40 /* LaunchAtLogin.framework */; };
+		30AC60C023D7843F0045BE40 /* LaunchAtLogin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 30AC60BE23D7843F0045BE40 /* LaunchAtLogin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		30C9B71823C9D3B40068A5DE /* StatusMQTTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9B71723C9D3B40068A5DE /* StatusMQTTService.swift */; };
 		30C9B71A23CA388D0068A5DE /* MQTTChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9B71923CA388D0068A5DE /* MQTTChannel.swift */; };
 		30C9B71E23CA47780068A5DE /* ToiletLightStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9B71D23CA47780068A5DE /* ToiletLightStatusModel.swift */; };
@@ -21,7 +23,22 @@
 		8B40D16423D6413200095BF5 /* RSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B40D16323D6413200095BF5 /* RSLog.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		30AC60C123D7843F0045BE40 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				30AC60C023D7843F0045BE40 /* LaunchAtLogin.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		30AC60BE23D7843F0045BE40 /* LaunchAtLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LaunchAtLogin.framework; path = Carthage/Build/Mac/LaunchAtLogin.framework; sourceTree = "<group>"; };
 		30C9B71723C9D3B40068A5DE /* StatusMQTTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMQTTService.swift; sourceTree = "<group>"; };
 		30C9B71923CA388D0068A5DE /* MQTTChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTChannel.swift; sourceTree = "<group>"; };
 		30C9B71D23CA47780068A5DE /* ToiletLightStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletLightStatusModel.swift; sourceTree = "<group>"; };
@@ -46,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30AC60BF23D7843F0045BE40 /* LaunchAtLogin.framework in Frameworks */,
 				3644C74969F2F95862B7AF67 /* Pods_iToilet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +121,7 @@
 		E68D944DB083624DC7524926 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				30AC60BE23D7843F0045BE40 /* LaunchAtLogin.framework */,
 				7F1767CCD6394BABB389A1B0 /* Pods_iToilet.framework */,
 			);
 			name = Frameworks;
@@ -120,6 +139,8 @@
 				30E3FE8C23C8BEF10003AABA /* Frameworks */,
 				30E3FE8D23C8BEF10003AABA /* Resources */,
 				06026E16585B88041E8EA6A5 /* [CP] Embed Pods Frameworks */,
+				30AC60C123D7843F0045BE40 /* Embed Frameworks */,
+				30AC60C223D7853E0045BE40 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -192,6 +213,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iToilet/Pods-iToilet-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		30AC60C223D7853E0045BE40 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PROJECT_DIR}/Carthage/Build/Mac/LaunchAtLogin.framework/Resources/copy-helper.sh\"\n";
 		};
 		AD12429C0C68B325F674B1EA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -371,6 +409,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6DLQ3N49V9;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = iToilet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -392,6 +434,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6DLQ3N49V9;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				INFOPLIST_FILE = iToilet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

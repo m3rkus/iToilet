@@ -361,7 +361,7 @@ private extension Timer {
             // infinite timer does nothing special on the state machine
             break
         }
-        
+        delegate?.timerDidFire(self)
     }
     
 }

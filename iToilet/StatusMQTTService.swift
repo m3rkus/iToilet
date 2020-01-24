@@ -8,7 +8,6 @@
 
 import Foundation
 import SwiftMQTT
-import Repeat
 
 protocol StatusMQTTServiceDelegate: class {
     
@@ -25,7 +24,7 @@ final class StatusMQTTService {
     private let mqttApiKey = "FVRIJXU8MB0L8K5U"
     private let responseFormat = "json"
     private var isDisconnectInitiatedByApp = false
-    private var reconnectionTimer: Repeater?
+    private var reconnectionTimer: Timer?
     private var reconnectionTimeInterval: Double = 0
     private var reconnectionTimeIntervalStep: Double = 5
 
@@ -93,11 +92,8 @@ final class StatusMQTTService {
         
         self.reconnectionTimeInterval += reconnectionTimeIntervalStep
         log.info("Schedule server reconnection in \(reconnectionTimeInterval) seconds", .network)
-        self.reconnectionTimer = Repeater.once(after: .seconds(reconnectionTimeInterval)) { [weak self] timer in
-            guard let self = self else { return }
-            log.info("Trying to reconnect ...", .network)
-            self.connect()
-        }
+        self.reconnectionTimer = Timer.once(after: .seconds(reconnectionTimeInterval))
+        self.reconnectionTimer?.delegate = self
     }
 }
 
@@ -132,3 +128,12 @@ extension StatusMQTTService: MQTTSessionDelegate {
     }
 }
 
+// MARK: - TimerDelegate
+extension StatusMQTTService: TimerDelegate {
+    
+    func timerDidFire(_ timer: Timer) {
+        
+        log.info("Trying to reconnect ...", .network)
+        connect()
+    }
+}

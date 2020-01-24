@@ -32,9 +32,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     private func udpateStatusItem(isToiletAvailable: Bool) {
         
-        statusItem.button?.contentTintColor = isToiletAvailable
-            ? NSColor(srgbRed: 0, green: 0.8, blue: 0, alpha: 1)
-            : .red
+        let statusImage = NSImage(named: NSImage.Name("status_circle"))
+        statusItem.button?.image = isToiletAvailable
+            ? statusImage?.imageWithTintColor(tintColor: NSColor(srgbRed: 0, green: 0.8, blue: 0, alpha: 1))
+            : statusImage?.imageWithTintColor(tintColor: .red)
     }
     
     private func presentNotification(isToiletAvailable: Bool) {

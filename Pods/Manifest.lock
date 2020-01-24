@@ -1,20 +1,16 @@
 PODS:
-  - Repeat (0.6.0)
   - SwiftMQTT (3.0.1)
 
 DEPENDENCIES:
-  - Repeat
   - SwiftMQTT
 
 SPEC REPOS:
   trunk:
-    - Repeat
     - SwiftMQTT
 
 SPEC CHECKSUMS:
-  Repeat: fd80848f4b3d6f133b18fdee04fd193aff6b31ff
   SwiftMQTT: 983eeb29e8c8173ed953e0238d2f99b79ff3ccd2
 
-PODFILE CHECKSUM: 976fd1970a310e4ca1b2aaeabadfae5dae5680b7
+PODFILE CHECKSUM: 053e0d95ff076744dfa48bd2cbdf11d836f008e5
 
 COCOAPODS: 1.8.4

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30AC60C623D8D6AE0045BE40 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC60C523D8D6AE0045BE40 /* Timer.swift */; };
+		30AC60C823D8D82A0045BE40 /* NSImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC60C723D8D82A0045BE40 /* NSImage+Color.swift */; };
 		30C9B71823C9D3B40068A5DE /* StatusMQTTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9B71723C9D3B40068A5DE /* StatusMQTTService.swift */; };
 		30C9B71A23CA388D0068A5DE /* MQTTChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9B71923CA388D0068A5DE /* MQTTChannel.swift */; };
 		30C9B71E23CA47780068A5DE /* ToiletLightStatusModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9B71D23CA47780068A5DE /* ToiletLightStatusModel.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		30AC60C523D8D6AE0045BE40 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		30AC60C723D8D82A0045BE40 /* NSImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Color.swift"; sourceTree = "<group>"; };
 		30C9B71723C9D3B40068A5DE /* StatusMQTTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMQTTService.swift; sourceTree = "<group>"; };
 		30C9B71923CA388D0068A5DE /* MQTTChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTChannel.swift; sourceTree = "<group>"; };
 		30C9B71D23CA47780068A5DE /* ToiletLightStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletLightStatusModel.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 				30C9B71D23CA47780068A5DE /* ToiletLightStatusModel.swift */,
 				30C9B71F23CA485D0068A5DE /* Data+prettyPrintedJSONString.swift */,
 				8B40D16323D6413200095BF5 /* RSLog.swift */,
+				30AC60C723D8D82A0045BE40 /* NSImage+Color.swift */,
+				30AC60C523D8D6AE0045BE40 /* Timer.swift */,
 				30E3FE9623C8BEF20003AABA /* Assets.xcassets */,
 				30E3FE9823C8BEF20003AABA /* Main.storyboard */,
 				30E3FE9B23C8BEF20003AABA /* Info.plist */,
@@ -225,8 +231,10 @@
 				30C9B71E23CA47780068A5DE /* ToiletLightStatusModel.swift in Sources */,
 				30C9B71823C9D3B40068A5DE /* StatusMQTTService.swift in Sources */,
 				30E3FEA323C910600003AABA /* UserSettings.swift in Sources */,
+				30AC60C623D8D6AE0045BE40 /* Timer.swift in Sources */,
 				30E3FEA923C92CD00003AABA /* StatusItem.swift in Sources */,
 				8B40D16423D6413200095BF5 /* RSLog.swift in Sources */,
+				30AC60C823D8D82A0045BE40 /* NSImage+Color.swift in Sources */,
 				30E3FEA523C91A3E0003AABA /* AppMenu.swift in Sources */,
 				30C9B72023CA485D0068A5DE /* Data+prettyPrintedJSONString.swift in Sources */,
 				30E3FE9323C8BEF10003AABA /* AppDelegate.swift in Sources */,
@@ -298,7 +306,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -352,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -376,6 +384,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.letmecode.corp.iToilet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -397,6 +406,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.letmecode.corp.iToilet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

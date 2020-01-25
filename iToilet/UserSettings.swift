@@ -17,7 +17,7 @@ struct UserSettings {
     
     @UserSetting(
         key: "isAutolaunchEnabled",
-        defaultValue: false)
+        defaultValue: true)
     static var isAutolaunchEnabled: Bool
     
     @UserSetting(

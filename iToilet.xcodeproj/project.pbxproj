@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		304ACCB523DCA3330098628A /* LauncherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304ACCB423DCA3330098628A /* LauncherService.swift */; };
+		304ACCB723DCADEB0098628A /* LauncherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304ACCB623DCADEB0098628A /* LauncherService.swift */; };
+		304ACCB923DCB37B0098628A /* RSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304ACCB823DCB37B0098628A /* RSLog.swift */; };
+		309887D323DB9B35009BCDDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309887D223DB9B35009BCDDF /* AppDelegate.swift */; };
+		309887D723DB9B38009BCDDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309887D623DB9B38009BCDDF /* Assets.xcassets */; };
+		309887DA23DB9B38009BCDDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309887D823DB9B38009BCDDF /* Main.storyboard */; };
+		309887E123DB9EE5009BCDDF /* Launcher.app in Copy Files */ = {isa = PBXBuildFile; fileRef = 309887D023DB9B35009BCDDF /* Launcher.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		309887E323DBA47E009BCDDF /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 309887E223DBA47E009BCDDF /* ServiceManagement.framework */; };
 		30AC60C623D8D6AE0045BE40 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC60C523D8D6AE0045BE40 /* Timer.swift */; };
 		30AC60C823D8D82A0045BE40 /* NSImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC60C723D8D82A0045BE40 /* NSImage+Color.swift */; };
 		30C9B71823C9D3B40068A5DE /* StatusMQTTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9B71723C9D3B40068A5DE /* StatusMQTTService.swift */; };
@@ -23,14 +31,38 @@
 		8B40D16423D6413200095BF5 /* RSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B40D16323D6413200095BF5 /* RSLog.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		309887E023DB9EA4009BCDDF /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				309887E123DB9EE5009BCDDF /* Launcher.app in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		304ACCB423DCA3330098628A /* LauncherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherService.swift; sourceTree = "<group>"; };
+		304ACCB623DCADEB0098628A /* LauncherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherService.swift; sourceTree = "<group>"; };
+		304ACCB823DCB37B0098628A /* RSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSLog.swift; sourceTree = "<group>"; };
+		309887D023DB9B35009BCDDF /* Launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Launcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		309887D223DB9B35009BCDDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		309887D623DB9B38009BCDDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		309887D923DB9B38009BCDDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		309887DB23DB9B38009BCDDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		309887DC23DB9B38009BCDDF /* Launcher.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Launcher.entitlements; sourceTree = "<group>"; };
+		309887E223DBA47E009BCDDF /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		30AC60C523D8D6AE0045BE40 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		30AC60C723D8D82A0045BE40 /* NSImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSImage+Color.swift"; sourceTree = "<group>"; };
 		30C9B71723C9D3B40068A5DE /* StatusMQTTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusMQTTService.swift; sourceTree = "<group>"; };
 		30C9B71923CA388D0068A5DE /* MQTTChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQTTChannel.swift; sourceTree = "<group>"; };
 		30C9B71D23CA47780068A5DE /* ToiletLightStatusModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToiletLightStatusModel.swift; sourceTree = "<group>"; };
 		30C9B71F23CA485D0068A5DE /* Data+prettyPrintedJSONString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+prettyPrintedJSONString.swift"; sourceTree = "<group>"; };
-		30E3FE8F23C8BEF10003AABA /* iToilet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iToilet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30E3FE8F23C8BEF10003AABA /* Toilet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toilet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30E3FE9223C8BEF10003AABA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30E3FE9623C8BEF20003AABA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30E3FE9923C8BEF20003AABA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,21 +78,44 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		309887CD23DB9B35009BCDDF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		30E3FE8C23C8BEF10003AABA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3644C74969F2F95862B7AF67 /* Pods_iToilet.framework in Frameworks */,
+				309887E323DBA47E009BCDDF /* ServiceManagement.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		309887D123DB9B35009BCDDF /* Launcher */ = {
+			isa = PBXGroup;
+			children = (
+				309887D223DB9B35009BCDDF /* AppDelegate.swift */,
+				304ACCB623DCADEB0098628A /* LauncherService.swift */,
+				304ACCB823DCB37B0098628A /* RSLog.swift */,
+				309887D623DB9B38009BCDDF /* Assets.xcassets */,
+				309887D823DB9B38009BCDDF /* Main.storyboard */,
+				309887DB23DB9B38009BCDDF /* Info.plist */,
+				309887DC23DB9B38009BCDDF /* Launcher.entitlements */,
+			);
+			path = Launcher;
+			sourceTree = "<group>";
+		};
 		30E3FE8623C8BEF10003AABA = {
 			isa = PBXGroup;
 			children = (
 				30E3FE9123C8BEF10003AABA /* iToilet */,
+				309887D123DB9B35009BCDDF /* Launcher */,
 				30E3FE9023C8BEF10003AABA /* Products */,
 				963EABE0D9FAF94F98D2E641 /* Pods */,
 				E68D944DB083624DC7524926 /* Frameworks */,
@@ -70,7 +125,8 @@
 		30E3FE9023C8BEF10003AABA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				30E3FE8F23C8BEF10003AABA /* iToilet.app */,
+				30E3FE8F23C8BEF10003AABA /* Toilet.app */,
+				309887D023DB9B35009BCDDF /* Launcher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +145,7 @@
 				8B40D16323D6413200095BF5 /* RSLog.swift */,
 				30AC60C723D8D82A0045BE40 /* NSImage+Color.swift */,
 				30AC60C523D8D6AE0045BE40 /* Timer.swift */,
+				304ACCB423DCA3330098628A /* LauncherService.swift */,
 				30E3FE9623C8BEF20003AABA /* Assets.xcassets */,
 				30E3FE9823C8BEF20003AABA /* Main.storyboard */,
 				30E3FE9B23C8BEF20003AABA /* Info.plist */,
@@ -109,6 +166,7 @@
 		E68D944DB083624DC7524926 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				309887E223DBA47E009BCDDF /* ServiceManagement.framework */,
 				7F1767CCD6394BABB389A1B0 /* Pods_iToilet.framework */,
 			);
 			name = Frameworks;
@@ -117,23 +175,41 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		30E3FE8E23C8BEF10003AABA /* iToilet */ = {
+		309887CF23DB9B35009BCDDF /* Launcher */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 30E3FE9F23C8BEF20003AABA /* Build configuration list for PBXNativeTarget "iToilet" */;
+			buildConfigurationList = 309887DF23DB9B38009BCDDF /* Build configuration list for PBXNativeTarget "Launcher" */;
+			buildPhases = (
+				309887CC23DB9B35009BCDDF /* Sources */,
+				309887CD23DB9B35009BCDDF /* Frameworks */,
+				309887CE23DB9B35009BCDDF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Launcher;
+			productName = Launcher;
+			productReference = 309887D023DB9B35009BCDDF /* Launcher.app */;
+			productType = "com.apple.product-type.application";
+		};
+		30E3FE8E23C8BEF10003AABA /* Toilet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30E3FE9F23C8BEF20003AABA /* Build configuration list for PBXNativeTarget "Toilet" */;
 			buildPhases = (
 				AD12429C0C68B325F674B1EA /* [CP] Check Pods Manifest.lock */,
 				30E3FE8B23C8BEF10003AABA /* Sources */,
 				30E3FE8C23C8BEF10003AABA /* Frameworks */,
 				30E3FE8D23C8BEF10003AABA /* Resources */,
 				06026E16585B88041E8EA6A5 /* [CP] Embed Pods Frameworks */,
+				309887E023DB9EA4009BCDDF /* Copy Files */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = iToilet;
+			name = Toilet;
 			productName = iToilet;
-			productReference = 30E3FE8F23C8BEF10003AABA /* iToilet.app */;
+			productReference = 30E3FE8F23C8BEF10003AABA /* Toilet.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -142,10 +218,13 @@
 		30E3FE8723C8BEF10003AABA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1120;
+				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = LetMeCode;
 				TargetAttributes = {
+					309887CF23DB9B35009BCDDF = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 					30E3FE8E23C8BEF10003AABA = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -164,12 +243,22 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				30E3FE8E23C8BEF10003AABA /* iToilet */,
+				30E3FE8E23C8BEF10003AABA /* Toilet */,
+				309887CF23DB9B35009BCDDF /* Launcher */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		309887CE23DB9B35009BCDDF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				309887D723DB9B38009BCDDF /* Assets.xcassets in Resources */,
+				309887DA23DB9B38009BCDDF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		30E3FE8D23C8BEF10003AABA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -224,6 +313,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		309887CC23DB9B35009BCDDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				309887D323DB9B35009BCDDF /* AppDelegate.swift in Sources */,
+				304ACCB923DCB37B0098628A /* RSLog.swift in Sources */,
+				304ACCB723DCADEB0098628A /* LauncherService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		30E3FE8B23C8BEF10003AABA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,6 +333,7 @@
 				30AC60C623D8D6AE0045BE40 /* Timer.swift in Sources */,
 				30E3FEA923C92CD00003AABA /* StatusItem.swift in Sources */,
 				8B40D16423D6413200095BF5 /* RSLog.swift in Sources */,
+				304ACCB523DCA3330098628A /* LauncherService.swift in Sources */,
 				30AC60C823D8D82A0045BE40 /* NSImage+Color.swift in Sources */,
 				30E3FEA523C91A3E0003AABA /* AppMenu.swift in Sources */,
 				30C9B72023CA485D0068A5DE /* Data+prettyPrintedJSONString.swift in Sources */,
@@ -245,6 +345,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		309887D823DB9B38009BCDDF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				309887D923DB9B38009BCDDF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		30E3FE9823C8BEF20003AABA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -256,6 +364,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		309887DD23DB9B38009BCDDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Launcher/Launcher.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6DLQ3N49V9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Launcher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.letmecode.m3rk.corp.ToiletLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		309887DE23DB9B38009BCDDF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Launcher/Launcher.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 6DLQ3N49V9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = Launcher/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.letmecode.m3rk.corp.ToiletLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		30E3FE9D23C8BEF20003AABA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -375,6 +529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iToilet/iToilet.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6DLQ3N49V9;
@@ -385,7 +540,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = com.letmecode.corp.iToilet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.letmecode.m3rk.corp.Toilet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -397,6 +552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = iToilet/iToilet.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 6DLQ3N49V9;
@@ -407,7 +563,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				PRODUCT_BUNDLE_IDENTIFIER = com.letmecode.corp.iToilet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.letmecode.m3rk.corp.Toilet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -416,6 +572,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		309887DF23DB9B38009BCDDF /* Build configuration list for PBXNativeTarget "Launcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				309887DD23DB9B38009BCDDF /* Debug */,
+				309887DE23DB9B38009BCDDF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		30E3FE8A23C8BEF10003AABA /* Build configuration list for PBXProject "iToilet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -425,7 +590,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		30E3FE9F23C8BEF20003AABA /* Build configuration list for PBXNativeTarget "iToilet" */ = {
+		30E3FE9F23C8BEF20003AABA /* Build configuration list for PBXNativeTarget "Toilet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				30E3FEA023C8BEF20003AABA /* Debug */,

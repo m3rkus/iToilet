@@ -13,9 +13,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     let statusItem = StatusItem().makeStatusItem()
     private let statusService = StatusMQTTService()
+    private let launcherService = LauncherService()
     private let appMenu = AppMenu()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        
+        launcherService.setLaunchAtLogin(enabled: UserSettings.isAutolaunchEnabled)
+        launcherService.killLauncherIfNeeded()
         
         statusItem.menu = appMenu.makeMenu()
         appMenu.setup()
@@ -23,12 +27,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             guard let self = self else { return }
             self.statusService.disconnect()
         }
+        appMenu.onLaunchAtLogin = { [weak self] enabled in
+            guard let self = self else { return }
+            self.launcherService.setLaunchAtLogin(enabled: enabled)
+        }
+        
         statusService.delegate = self
         udpateStatusItem(isToiletAvailable: UserSettings.isToiletAvailableCurrentStatus ?? true)
         statusService.connect()
     }
 
-    func applicationWillTerminate(_ aNotification: Notification) {}
+    func applicationWillTerminate(_ aNotification: Notification) {
+    }
     
     private func udpateStatusItem(isToiletAvailable: Bool) {
         

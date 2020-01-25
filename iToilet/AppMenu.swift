@@ -11,7 +11,8 @@ import Cocoa
 final class AppMenu {
     
     // MARK: - Public Properties
-    var onAppQuit: (() -> ())?
+    var onAppQuit: (() -> Void)?
+    var onLaunchAtLogin: ((_ enabled: Bool) -> Void)?
     
     // MARK: - Private Properties
     lazy var notificationMenuItem: NSMenuItem = {
@@ -38,15 +39,12 @@ final class AppMenu {
         menuItem.target = self
         return menuItem
     }()
-    
-    var isNotificationEnabled = UserSettings.isNotificationEnabled
-    var isAutolaunchEnabled = UserSettings.isAutolaunchEnabled
-    
+        
     // MARK: - Setup
     func setup() {
         
-        updateNotificationButtonState()
-        updateAutolaunchButtonState()
+        updateNotificationButtonState(enabled: UserSettings.isNotificationEnabled)
+        updateAutolaunchButtonState(enabled: UserSettings.isAutolaunchEnabled)
     }
     
     // MARK: - Menu
@@ -62,28 +60,31 @@ final class AppMenu {
     
     @objc func tapNotificationButton() {
         
+        var isNotificationEnabled = UserSettings.isNotificationEnabled
         isNotificationEnabled.toggle()
         UserSettings.isNotificationEnabled = isNotificationEnabled
-        updateNotificationButtonState()
+        updateNotificationButtonState(enabled: isNotificationEnabled)
     }
     
-    private func updateNotificationButtonState() {
+    private func updateNotificationButtonState(enabled: Bool) {
         
-        notificationMenuItem.state = isNotificationEnabled
+        notificationMenuItem.state = enabled
             ? .on
             : .off
     }
     
     @objc func tapAutolaunchButton() {
         
+        var isAutolaunchEnabled = UserSettings.isAutolaunchEnabled
         isAutolaunchEnabled.toggle()
         UserSettings.isAutolaunchEnabled = isAutolaunchEnabled
-        updateAutolaunchButtonState()
+        updateAutolaunchButtonState(enabled: isAutolaunchEnabled)
+        onLaunchAtLogin?(isAutolaunchEnabled)
     }
     
-    private func updateAutolaunchButtonState() {
+    private func updateAutolaunchButtonState(enabled: Bool) {
         
-        autolaunchMenuItem.state = isAutolaunchEnabled
+        autolaunchMenuItem.state = enabled
             ? .on
             : .off
     }

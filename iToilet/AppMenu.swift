@@ -13,8 +13,25 @@ final class AppMenu {
     // MARK: - Public Properties
     var onAppQuit: (() -> Void)?
     var onLaunchAtLogin: ((_ enabled: Bool) -> Void)?
+    var onReconnection: (() -> Void)?
     
     // MARK: - Private Properties
+    lazy var serverConnectionMenuItem: NSMenuItem = {
+        let menuItem = NSMenuItem(
+            title: "Соединение",
+            action: nil,
+            keyEquivalent: "")
+        menuItem.state = .off
+        return menuItem
+    }()
+    lazy var reconnectionMenuItem: NSMenuItem = {
+        let menuItem = NSMenuItem(
+            title: "Переподключиться",
+            action: #selector(tapReconnectionButton),
+            keyEquivalent: "r")
+        menuItem.target = self
+        return menuItem
+    }()
     lazy var notificationMenuItem: NSMenuItem = {
         let menuItem = NSMenuItem(
             title: "Оповещения",
@@ -51,11 +68,28 @@ final class AppMenu {
     func makeMenu() -> NSMenu {
         
         let menu = NSMenu()
+        menu.addItem(serverConnectionMenuItem)
+        menu.addItem(reconnectionMenuItem)
+        menu.addItem(NSMenuItem.separator())
         menu.addItem(notificationMenuItem)
         menu.addItem(autolaunchMenuItem)
         menu.addItem(NSMenuItem.separator())
         menu.addItem(quitMenuButton)
+        changeConnectionMenuItemState(isConnected: false)
         return menu
+    }
+    
+    func changeConnectionMenuItemState(isConnected: Bool) {
+        
+        let statusImage = NSImage(named: NSImage.Name("connection_circle"))
+        serverConnectionMenuItem.image = isConnected
+            ? statusImage?.imageWithTintColor(tintColor: NSColor(srgbRed: 0, green: 0.8, blue: 0, alpha: 1))
+            : statusImage?.imageWithTintColor(tintColor: .red)
+    }
+    
+    @objc func tapReconnectionButton() {
+        
+        onReconnection?()
     }
     
     @objc func tapNotificationButton() {

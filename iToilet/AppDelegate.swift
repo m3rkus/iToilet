@@ -31,13 +31,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             guard let self = self else { return }
             self.launcherService.setLaunchAtLogin(enabled: enabled)
         }
+        appMenu.onReconnection = { [weak self] in
+            guard let self = self else { return }
+            self.statusService.connect()
+        }
         
         statusService.delegate = self
         udpateStatusItem(isToiletAvailable: UserSettings.isToiletAvailableCurrentStatus ?? true)
-        statusService.connect()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
+    }
+    
+    func applicationWillBecomeActive(_ notification: Notification) {
+        
+        log.info("App will become active", .general)
+        statusService.connect()
     }
     
     private func udpateStatusItem(isToiletAvailable: Bool) {
@@ -80,6 +89,11 @@ extension AppDelegate: StatusMQTTServiceDelegate {
     func updateStatus(isToiletAvailable: Bool) {
         
         updateToiletAvailableStatus(isToiletAvailable: isToiletAvailable)
+    }
+    
+    func updateConnectionStatus(isConnected: Bool) {
+        
+        appMenu.changeConnectionMenuItemState(isConnected: isConnected)
     }
 }
 

@@ -12,6 +12,7 @@ import SwiftMQTT
 protocol StatusMQTTServiceDelegate: class {
     
     func updateStatus(isToiletAvailable: Bool)
+    func updateConnectionStatus(isConnected: Bool)
 }
 
 final class StatusMQTTService {
@@ -51,6 +52,7 @@ final class StatusMQTTService {
                 log.error("Unable to connect to MQTT Server, error: \(error.localizedDescription)", .network)
             } else {
                 log.info("Connected to MQTT server", .network)
+                self.delegate?.updateConnectionStatus(isConnected: true)
                 self.reconnectionTimeInterval = 0
                 self.isDisconnectInitiatedByApp = false
                 self.subscribeTo(channel: .toiletLightStatus)
@@ -120,6 +122,7 @@ extension StatusMQTTService: MQTTSessionDelegate {
     func mqttDidDisconnect(session: MQTTSession, error: MQTTSessionError) {
         
         log.info("Disconnect from MQTT server", .network)
+        delegate?.updateConnectionStatus(isConnected: false)
         if !isDisconnectInitiatedByApp {
             scheduleReconnection()
         } else {

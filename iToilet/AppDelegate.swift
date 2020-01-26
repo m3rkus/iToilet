@@ -38,15 +38,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         statusService.delegate = self
         udpateStatusItem(isToiletAvailable: UserSettings.isToiletAvailableCurrentStatus ?? true)
+        self.statusService.connect()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-    }
-    
-    func applicationWillBecomeActive(_ notification: Notification) {
-        
-        log.info("App will become active", .general)
-        statusService.connect()
     }
     
     private func udpateStatusItem(isToiletAvailable: Bool) {

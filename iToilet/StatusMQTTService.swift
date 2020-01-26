@@ -50,6 +50,7 @@ final class StatusMQTTService {
             guard let self = self else { return }
             if error != .none {
                 log.error("Unable to connect to MQTT Server, error: \(error.localizedDescription)", .network)
+                self.scheduleReconnection()
             } else {
                 log.info("Connected to MQTT server", .network)
                 self.delegate?.updateConnectionStatus(isConnected: true)

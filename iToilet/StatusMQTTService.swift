@@ -88,7 +88,7 @@ final class StatusMQTTService {
             log.error("Unable to convert status string to double value", .network)
             return true
         }
-        return statusValue < 500
+        return statusValue < 700
     }
     
     private func scheduleReconnection() {

@@ -161,7 +161,6 @@ final public class RSLog: RSLogProtocol {
         function: String,
         line: UInt) {
         
-        #if DEBUG
         logQueue.async { [weak self] in
             guard let `self` = self else { return }
             
@@ -193,7 +192,6 @@ final public class RSLog: RSLogProtocol {
                 print(logString)
             }
         }
-        #endif
     }
     
     private func formattedLogLevelString(from logLevel: LogLevel) -> String? {

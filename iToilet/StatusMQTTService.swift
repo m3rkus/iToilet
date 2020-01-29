@@ -27,7 +27,7 @@ final class StatusMQTTService {
     private var isDisconnectInitiatedByApp = false
     private var reconnectionTimer: Timer?
     private var reconnectionTimeInterval: Double = 0
-    private var reconnectionTimeIntervalStep: Double = 5
+    private var reconnectionTimeIntervalStep: Double = 1
 
     private lazy var mqttSession: MQTTSession = {
         let session = MQTTSession(

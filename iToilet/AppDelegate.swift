@@ -89,6 +89,11 @@ extension AppDelegate: StatusMQTTServiceDelegate {
     func updateConnectionStatus(isConnected: Bool) {
         
         appMenu.changeConnectionMenuItemState(isConnected: isConnected)
+        if !isConnected {
+            statusItem.button?.image = NSImage(named: NSImage.Name("status_circle"))?.imageWithTintColor(tintColor: .gray)
+        } else {
+            udpateStatusItem(isToiletAvailable: UserSettings.isToiletAvailableCurrentStatus ?? true)
+        }
     }
 }
 

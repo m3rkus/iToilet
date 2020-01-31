@@ -24,18 +24,23 @@ final class StatusMQTTService {
     private let port: UInt16 = 1883
     private let mqttApiKey = "FVRIJXU8MB0L8K5U"
     private let responseFormat = "json"
+    private let keepAliveTime: UInt16 = 10
     private var isDisconnectInitiatedByApp = false
     private var reconnectionTimer: Timer?
     private var reconnectionTimeInterval: Double = 0
     private var reconnectionTimeIntervalStep: Double = 1
+    
+    private var clientID: String {
+        return UUID().uuidString
+    }
 
     private lazy var mqttSession: MQTTSession = {
         let session = MQTTSession(
             host: host,
             port: port,
-            clientID: username,
+            clientID: clientID,
             cleanSession: true,
-            keepAlive: 60,
+            keepAlive: keepAliveTime,
             useSSL: false
         )
         session.username = username
